@@ -12,7 +12,6 @@
         }
         
         .bttonStyle {
-            width: 21px;
         }
         
     </style>
@@ -80,7 +79,18 @@
                 onclick="Button25_Click" />
     </p>
     <p>
+    <asp:Button ID="Button28" runat="server" Text="Пробел" CssClass="bttonStyle" 
+                onclick="Button28_Click" Width="197px" />
+    </p>
+
+    <p>
             <asp:TextBox id="tb1" runat="server" />
+    <asp:Button ID="Button27" runat="server" Text="Удалить" CssClass="bttonStyle" 
+                onclick="Button27_Click" />
+    </p>
+    <p>
+            <asp:Button ID="Button26" runat="server" Text="Очистить" CssClass="bttonStyle" 
+                onclick="Button26_Click" Width="98px" />
     </p>
     </form>
 </body>
