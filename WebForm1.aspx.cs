@@ -117,5 +117,17 @@ namespace WebApplication1
         {
             tb1.Text +="m";
         }
+        protected void Button26_Click(object sender, EventArgs e)
+        {
+            tb1.Text = "";
+        }
+        protected void Button27_Click(object sender, EventArgs e)
+        {
+            tb1.Text = tb1.Text.Substring(0, tb1.Text.Length-1);
+        }
+        protected void Button28_Click(object sender, EventArgs e)
+        {
+            tb1.Text += " ";
+        }
     }
 }
