@@ -4,26 +4,25 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    
-    <style type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<style type="text/css">
         .block 
         {
             margin: 0;
         }
-        
         .bttonStyle {
         }
-        
     </style>
-
-    <title>Виртуальная Клавиатура v1.0</title>
 </head>
 <body>
+  <div id="dialog" title="Виртуальная клавиатура v1.2">
     <form id="form1" runat="server">
     <div>
             <asp:Button runat="server" Text="q" CssClass="bttonStyle" 
                 onclick="Unnamed1_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-               <asp:Button ID="Button1" runat="server" Text="w" CssClass="bttonStyle" 
+                <asp:Button ID="Button1" runat="server" Text="w" CssClass="bttonStyle" 
                 onclick="Button1_Click" BorderStyle="None" Height="30px" Width="30px" /> 
             <asp:Button ID="Button2" runat="server" Text="e" CssClass="bttonStyle" 
                 onclick="Button2_Click" BorderStyle="None" Height="30px" Width="30px" /> 
@@ -93,6 +92,14 @@
             <asp:Button ID="Button26" runat="server" Text="Очистить" CssClass="bttonStyle" 
                 onclick="Button26_Click" Width="98px" />
     </p>
+
     </form>
+  </div>
+  <script>
+      $("#dialog").dialog();
+      $("#dialog").dialog("option", "height", 360);
+      $("#dialog").dialog("option", "width", 410);
+      $("#dialog").dialog({ resizable: false })
+  </script>
 </body>
 </html>
