@@ -7,100 +7,127 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<style type="text/css">
-     <style type="text/css">
-        .block 
+    <style type="text/css">
+        .bts
         {
-            margin: 0;
-        }
-        .bttonStyle {
+            height: 30px;
+            width: 30px;
         }
     </style>
 </head>
-<body>
+<body style="width: 559px">
   <div id="dialog" title="Виртуальная клавиатура v1.2">
-    <form id="form1" runat="server">
     <div>
-            <asp:Button runat="server" Text="q" CssClass="bttonStyle" 
-                onclick="Unnamed1_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-                <asp:Button ID="Button1" runat="server" Text="w" CssClass="bttonStyle" 
-                onclick="Button1_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button2" runat="server" Text="e" CssClass="bttonStyle" 
-                onclick="Button2_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button3" runat="server" Text="r" CssClass="bttonStyle" 
-                onclick="Button3_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button4" runat="server" Text="t" CssClass="bttonStyle" 
-                onclick="Button4_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button5" runat="server" Text="y" CssClass="bttonStyle" 
-                onclick="Button5_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button6" runat="server" Text="u" CssClass="bttonStyle" 
-                onclick="Button6_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button7" runat="server" Text="i" CssClass="bttonStyle" 
-                onclick="Button7_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button8" runat="server" Text="o" CssClass="bttonStyle" 
-                onclick="Button8_Click" BorderStyle="None" Height="30px" Width="30px" /> 
-            <asp:Button ID="Button9" runat="server" Text="p" CssClass="bttonStyle" 
-                onclick="Button9_Click" BorderStyle="None" Height="30px" Width="30px" /> 
+        <input type="button" value="`" id="zkv" style="width: 30px; height: 30px" />
+        <input type="button" value="1" id="1" class="bts" />
+        <input type="button" value="2" id="2" class="bts" />
+        <input type="button" value="3" id="3" class="bts" />
+        <input type="button" value="4" id="4" class="bts" />
+        <input type="button" value="5" id="5" class="bts" /> 
+        <input type="button" value="6" id="6" class="bts" />
+        <input type="button" value="7" id="7" class="bts" />
+        <input type="button" value="8" id="8" class="bts" />
+        <input type="button" value="9" id="9" class="bts" />
+        <input type="button" value="0" id="0" class="bts" />
+        <input type="button" value="-" id="mns" class="bts" />
+        <input type="button" value="=" id="rvn" class="bts" />
+        <input type="button" value="Backspace" id="backspace" 
+            style="width: 110px; height: 30px" />
     </div>
-    <p>
-            <asp:Button ID="Button10" runat="server" Text="a" CssClass="bttonStyle" 
-                onclick="Button10_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button11" runat="server" Text="s" CssClass="bttonStyle" 
-                onclick="Button11_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button12" runat="server" Text="d" CssClass="bttonStyle" 
-                onclick="Button12_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button13" runat="server" Text="f" CssClass="bttonStyle" 
-                onclick="Button13_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button14" runat="server" Text="g" CssClass="bttonStyle" 
-                onclick="Button14_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button15" runat="server" Text="h" CssClass="bttonStyle" 
-                onclick="Button15_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button16" runat="server" Text="j" CssClass="bttonStyle" 
-                onclick="Button16_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button17" runat="server" Text="k" CssClass="bttonStyle" 
-                onclick="Button17_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button18" runat="server" Text="l" CssClass="bttonStyle" 
-                onclick="Button18_Click" BorderStyle="None" Height="30px" Width="30px" />
-            </p>
-    <p>
-            <asp:Button ID="Button19" runat="server" Text="z" CssClass="bttonStyle" 
-                onclick="Button19_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button20" runat="server" Text="x" CssClass="bttonStyle" 
-                onclick="Button20_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button21" runat="server" Text="c" CssClass="bttonStyle" 
-                onclick="Button21_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button22" runat="server" Text="v" CssClass="bttonStyle" 
-                onclick="Button22_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button23" runat="server" Text="b" CssClass="bttonStyle" 
-                onclick="Button23_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button24" runat="server" Text="n" CssClass="bttonStyle" 
-                onclick="Button24_Click" BorderStyle="None" Height="30px" Width="30px" />
-            <asp:Button ID="Button25" runat="server" Text="m" CssClass="bttonStyle" 
-                onclick="Button25_Click" BorderStyle="None" Height="30px" Width="30px" />
-    </p>
-    <p>
-    <asp:Button ID="Button28" runat="server" Text="Пробел" CssClass="bttonStyle" 
-                onclick="Button28_Click" Width="300px" BorderStyle="None" 
-            Height="30px" />
-    </p>
-
-    <p>
-            <asp:TextBox id="tb1" runat="server" />
-    <asp:Button ID="Button27" runat="server" Text="Удалить" CssClass="bttonStyle" 
-                onclick="Button27_Click" />
-    </p>
-    <p>
-            <asp:Button ID="Button26" runat="server" Text="Очистить" CssClass="bttonStyle" 
-                onclick="Button26_Click" Width="98px" />
-    </p>
-
-    </form>
+    <div>
+        <input type="button" value="Tab" id="tab" style="width: 45px; height: 30px" />
+        <input type="button" value="q" id="q" class="bts" />
+        <input type="button" value="w" id="w" class="bts" />
+        <input type="button" value="e" id="e" class="bts" />
+        <input type="button" value="r" id="r" class="bts" />
+        <input type="button" value="t" id="t" class="bts" /> 
+        <input type="button" value="y" id="y" class="bts" />
+        <input type="button" value="u" id="u" class="bts" />
+        <input type="button" value="i" id="i" class="bts" />
+        <input type="button" value="o" id="o" class="bts" />
+        <input type="button" value="p" id="p" class="bts" />
+        <input type="button" value="[" id="kvch" class="bts" />
+        <input type="button" value="]" id="kvch1" class="bts" />
+        <input type="button" value="\" id="slh" style="width: 95px; height: 30px" />
+    </div>
+    <div>
+        <input type="button" value="Caps Lock" id="caps" style="width: 60px; height: 30px" />
+        <input type="button" value="a" id="a" class="bts" />
+        <input type="button" value="s" id="s" class="bts" />
+        <input type="button" value="d" id="d" class="bts" />
+        <input type="button" value="f" id="f" class="bts" />
+        <input type="button" value="g" id="g" class="bts" />
+        <input type="button" value="h" id="h" class="bts" />
+        <input type="button" value="j" id="j" class="bts" />
+        <input type="button" value="k" id="k" class="bts" />
+        <input type="button" value="l" id="l" class="bts" />
+        <input type="button" value=";" id="tsz" class="bts" />
+        <input type="button" value="'" id="zpt" class="bts" />
+        <input type="button" value="Сохранить" id="save" 
+            style="width: 115px; height: 30px" />
+    </div>
+    <div>
+        <input type="button" value="Shift" id="shift" 
+            style="width: 73px; height: 30px" />
+        <input type="button" value="z" id="z" class="bts" />
+        <input type="button" value="x" id="x" class="bts" />
+        <input type="button" value="c" id="c" class="bts" />
+        <input type="button" value="v" id="v" class="bts" />
+        <input type="button" value="b" id="b" class="bts" />
+        <input type="button" value="n" id="n" class="bts" />
+        <input type="button" value="m" id="m" class="bts" />
+        <input type="button" value="," id="Button1" class="bts" />
+        <input type="button" value="." id="Button2" class="bts" />
+        <input type="button" value="/" id="Button3" class="bts" />
+        <input type="button" value="Shift" id="shift" 
+            style="width: 139px; height: 30px" />
+     </div>
+     <input type="button" value="" id="prbl" 
+            style="width: 261px; height: 30px; margin-left: 99px;" />
   </div>
   <script>
-      $("#dialog").dialog();
-      $("#dialog").dialog("option", "height", 360);
-      $("#dialog").dialog("option", "width", 410);
+      $("#q").click(function () { $("#tb").val($("#tb").val() + "q"); });
+      $("#w").click(function () { $("#tb").val($("#tb").val() + "w"); });
+      $("#e").click(function () { $("#tb").val($("#tb").val() + "e"); });
+      $("#r").click(function () { $("#tb").val($("#tb").val() + "r"); });
+      $("#t").click(function () { $("#tb").val($("#tb").val() + "t"); });
+      $("#y").click(function () { $("#tb").val($("#tb").val() + "y"); });
+      $("#u").click(function () { $("#tb").val($("#tb").val() + "u"); });
+      $("#i").click(function () { $("#tb").val($("#tb").val() + "i"); });
+      $("#o").click(function () { $("#tb").val($("#tb").val() + "o"); });
+      $("#p").click(function () { $("#tb").val($("#tb").val() + "p"); });
+      $("#a").click(function () { $("#tb").val($("#tb").val() + "a"); });
+      $("#s").click(function () { $("#tb").val($("#tb").val() + "s"); });
+      $("#d").click(function () { $("#tb").val($("#tb").val() + "d"); });
+      $("#f").click(function () { $("#tb").val($("#tb").val() + "f"); });
+      $("#g").click(function () { $("#tb").val($("#tb").val() + "g"); });
+      $("#h").click(function () { $("#tb").val($("#tb").val() + "h"); });
+      $("#j").click(function () { $("#tb").val($("#tb").val() + "j"); });
+      $("#k").click(function () { $("#tb").val($("#tb").val() + "k"); });
+      $("#l").click(function () { $("#tb").val($("#tb").val() + "l"); });
+      $("#z").click(function () { $("#tb").val($("#tb").val() + "z"); });
+      $("#x").click(function () { $("#tb").val($("#tb").val() + "x"); });
+      $("#c").click(function () { $("#tb").val($("#tb").val() + "c"); });
+      $("#v").click(function () { $("#tb").val($("#tb").val() + "v"); });
+      $("#b").click(function () { $("#tb").val($("#tb").val() + "b"); });
+      $("#n").click(function () { $("#tb").val($("#tb").val() + "n"); });
+      $("#m").click(function () { $("#tb").val($("#tb").val() + "m"); });
+      $("#1").click(function () { $("#tb").val($("#tb").val() + "1"); });
+      $("#2").click(function () { $("#tb").val($("#tb").val() + "2"); });
+      $("#3").click(function () { $("#tb").val($("#tb").val() + "3"); });
+      $("#4").click(function () { $("#tb").val($("#tb").val() + "4"); });
+      $("#5").click(function () { $("#tb").val($("#tb").val() + "5"); });
+      $("#6").click(function () { $("#tb").val($("#tb").val() + "6"); });
+      $("#7").click(function () { $("#tb").val($("#tb").val() + "7"); });
+      $("#8").click(function () { $("#tb").val($("#tb").val() + "8"); });
+      $("#9").click(function () { $("#tb").val($("#tb").val() + "9"); });
+      $("#0").click(function () { $("#tb").val($("#tb").val() + "0"); });
+      $("#mns").click(function () { $("#tb").val($("#tb").val() + "-"); });
+      $("#rvn").click(function () { $("#tb").val($("#tb").val() + "="); });
+      $("#backspace").click(function () { $("#tb").val($("#tb").val() + ""); });
+      $("#dialog").dialog({ width: 650 },{ height: 300 });
       $("#dialog").dialog({ resizable: false })
   </script>
+     <input type="text" size="40" id="tb" />
 </body>
 </html>
