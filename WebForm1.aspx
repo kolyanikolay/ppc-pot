@@ -15,8 +15,8 @@
         }
     </style>
 </head>
-<body style="width: 559px">
-  <div id="dialog" title="Виртуальная клавиатура v1.2">
+<body>
+  <div id="dialog" title="Виртуальная клавиатура v2.1">
     <div>
         <input type="button" value="`" id="zkv" style="width: 30px; height: 30px" />
         <input type="button" value="1" id="1" class="bts" />
@@ -32,7 +32,7 @@
         <input type="button" value="-" id="mns" class="bts" />
         <input type="button" value="=" id="rvn" class="bts" />
         <input type="button" value="Backspace" id="backspace" 
-            style="width: 110px; height: 30px" />
+            style="width: 110px; height: 30px" onClick="deleteChar(tb)"/>
     </div>
     <div>
         <input type="button" value="Tab" id="tab" style="width: 45px; height: 30px" />
@@ -68,7 +68,7 @@
     </div>
     <div>
         <input type="button" value="Shift" id="shift" 
-            style="width: 73px; height: 30px" />
+            style="width: 73px; height: 30px"/>
         <input type="button" value="z" id="z" class="bts" />
         <input type="button" value="x" id="x" class="bts" />
         <input type="button" value="c" id="c" class="bts" />
@@ -76,58 +76,74 @@
         <input type="button" value="b" id="b" class="bts" />
         <input type="button" value="n" id="n" class="bts" />
         <input type="button" value="m" id="m" class="bts" />
-        <input type="button" value="," id="Button1" class="bts" />
-        <input type="button" value="." id="Button2" class="bts" />
-        <input type="button" value="/" id="Button3" class="bts" />
-        <input type="button" value="Shift" id="shift" 
+        <input type="button" value="," id="but1" class="bts" />
+        <input type="button" value="." id="but2" class="bts" />
+        <input type="button" value="/" id="but3" class="bts" />
+        <input type="button" value="Shift" id="shift1" 
             style="width: 139px; height: 30px" />
      </div>
      <input type="button" value="" id="prbl" 
             style="width: 261px; height: 30px; margin-left: 99px;" />
   </div>
   <script>
-      $("#q").click(function () { $("#tb").val($("#tb").val() + "q"); });
-      $("#w").click(function () { $("#tb").val($("#tb").val() + "w"); });
-      $("#e").click(function () { $("#tb").val($("#tb").val() + "e"); });
-      $("#r").click(function () { $("#tb").val($("#tb").val() + "r"); });
-      $("#t").click(function () { $("#tb").val($("#tb").val() + "t"); });
-      $("#y").click(function () { $("#tb").val($("#tb").val() + "y"); });
-      $("#u").click(function () { $("#tb").val($("#tb").val() + "u"); });
-      $("#i").click(function () { $("#tb").val($("#tb").val() + "i"); });
-      $("#o").click(function () { $("#tb").val($("#tb").val() + "o"); });
-      $("#p").click(function () { $("#tb").val($("#tb").val() + "p"); });
-      $("#a").click(function () { $("#tb").val($("#tb").val() + "a"); });
-      $("#s").click(function () { $("#tb").val($("#tb").val() + "s"); });
-      $("#d").click(function () { $("#tb").val($("#tb").val() + "d"); });
-      $("#f").click(function () { $("#tb").val($("#tb").val() + "f"); });
-      $("#g").click(function () { $("#tb").val($("#tb").val() + "g"); });
-      $("#h").click(function () { $("#tb").val($("#tb").val() + "h"); });
-      $("#j").click(function () { $("#tb").val($("#tb").val() + "j"); });
-      $("#k").click(function () { $("#tb").val($("#tb").val() + "k"); });
-      $("#l").click(function () { $("#tb").val($("#tb").val() + "l"); });
-      $("#z").click(function () { $("#tb").val($("#tb").val() + "z"); });
-      $("#x").click(function () { $("#tb").val($("#tb").val() + "x"); });
-      $("#c").click(function () { $("#tb").val($("#tb").val() + "c"); });
-      $("#v").click(function () { $("#tb").val($("#tb").val() + "v"); });
-      $("#b").click(function () { $("#tb").val($("#tb").val() + "b"); });
-      $("#n").click(function () { $("#tb").val($("#tb").val() + "n"); });
-      $("#m").click(function () { $("#tb").val($("#tb").val() + "m"); });
-      $("#1").click(function () { $("#tb").val($("#tb").val() + "1"); });
-      $("#2").click(function () { $("#tb").val($("#tb").val() + "2"); });
-      $("#3").click(function () { $("#tb").val($("#tb").val() + "3"); });
-      $("#4").click(function () { $("#tb").val($("#tb").val() + "4"); });
-      $("#5").click(function () { $("#tb").val($("#tb").val() + "5"); });
-      $("#6").click(function () { $("#tb").val($("#tb").val() + "6"); });
-      $("#7").click(function () { $("#tb").val($("#tb").val() + "7"); });
-      $("#8").click(function () { $("#tb").val($("#tb").val() + "8"); });
-      $("#9").click(function () { $("#tb").val($("#tb").val() + "9"); });
-      $("#0").click(function () { $("#tb").val($("#tb").val() + "0"); });
-      $("#mns").click(function () { $("#tb").val($("#tb").val() + "-"); });
-      $("#rvn").click(function () { $("#tb").val($("#tb").val() + "="); });
-      $("#backspace").click(function () { $("#tb").val($("#tb").val() + ""); });
-      $("#dialog").dialog({ width: 650 },{ height: 300 });
+              $("#zkv").click(function () { $("#tb").val($("#tb").val() + "`"); });
+              $("#1").click(function () { $("#tb").val($("#tb").val() + "1"); });
+              $("#2").click(function () { $("#tb").val($("#tb").val() + "2"); });
+              $("#3").click(function () { $("#tb").val($("#tb").val() + "3"); });
+              $("#4").click(function () { $("#tb").val($("#tb").val() + "4"); });
+              $("#5").click(function () { $("#tb").val($("#tb").val() + "5"); });
+              $("#6").click(function () { $("#tb").val($("#tb").val() + "6"); });
+              $("#7").click(function () { $("#tb").val($("#tb").val() + "7"); });
+              $("#8").click(function () { $("#tb").val($("#tb").val() + "8"); });
+              $("#9").click(function () { $("#tb").val($("#tb").val() + "9"); });
+              $("#0").click(function () { $("#tb").val($("#tb").val() + "0"); });
+              $("#mns").click(function () { $("#tb").val($("#tb").val() + "-"); });
+              $("#rvn").click(function () { $("#tb").val($("#tb").val() + "="); });
+              function deleteChar(input) { input.value = input.value.substring(0, input.value.length - 1) }
+
+              $("#tab").click(function () { $("#tb").val($("#tb").val() + "    "); });
+              $("#q").click(function () { $("#tb").val($("#tb").val() + "q"); });
+              $("#w").click(function () { $("#tb").val($("#tb").val() + "w"); });
+              $("#e").click(function () { $("#tb").val($("#tb").val() + "e"); });
+              $("#r").click(function () { $("#tb").val($("#tb").val() + "r"); });
+              $("#t").click(function () { $("#tb").val($("#tb").val() + "t"); });
+              $("#y").click(function () { $("#tb").val($("#tb").val() + "y"); });
+              $("#u").click(function () { $("#tb").val($("#tb").val() + "u"); });
+              $("#i").click(function () { $("#tb").val($("#tb").val() + "i"); });
+              $("#o").click(function () { $("#tb").val($("#tb").val() + "o"); });
+              $("#p").click(function () { $("#tb").val($("#tb").val() + "p"); });
+              $("#kvch").click(function () { $("#tb").val($("#tb").val() + "["); });
+              $("#kvch1").click(function () { $("#tb").val($("#tb").val() + "]"); });
+              $("#slh").click(function () { $("#tb").val($("#tb").val() + "Это слеш"); });
+
+              $("#a").click(function () { $("#tb").val($("#tb").val() + "a"); });
+              $("#s").click(function () { $("#tb").val($("#tb").val() + "s"); });
+              $("#d").click(function () { $("#tb").val($("#tb").val() + "d"); });
+              $("#f").click(function () { $("#tb").val($("#tb").val() + "f"); });
+              $("#g").click(function () { $("#tb").val($("#tb").val() + "g"); });
+              $("#h").click(function () { $("#tb").val($("#tb").val() + "h"); });
+              $("#j").click(function () { $("#tb").val($("#tb").val() + "j"); });
+              $("#k").click(function () { $("#tb").val($("#tb").val() + "k"); });
+              $("#l").click(function () { $("#tb").val($("#tb").val() + "l"); });
+              $("#tsz").click(function () { $("#tb").val($("#tb").val() + ";"); });
+              $("#zpt").click(function () { $("#tb").val($("#tb").val() + "Это ковычка"); });
+
+              $("#z").click(function () { $("#tb").val($("#tb").val() + "z"); });
+              $("#x").click(function () { $("#tb").val($("#tb").val() + "x"); });
+              $("#c").click(function () { $("#tb").val($("#tb").val() + "c"); });
+              $("#v").click(function () { $("#tb").val($("#tb").val() + "v"); });
+              $("#b").click(function () { $("#tb").val($("#tb").val() + "b"); });
+              $("#n").click(function () { $("#tb").val($("#tb").val() + "n"); });
+              $("#m").click(function () { $("#tb").val($("#tb").val() + "m"); });
+              $("#but1").click(function () { $("#tb").val($("#tb").val() + ","); });
+              $("#but2").click(function () { $("#tb").val($("#tb").val() + "."); });
+              $("#but3").click(function () { $("#tb").val($("#tb").val() + "/"); });
+
+              $("#prbl").click(function () { $("#tb").val($("#tb").val() + " "); });
+
+      $("#dialog").dialog({ width: 650 }, { height: 300 });
       $("#dialog").dialog({ resizable: false })
-  </script>
-     <input type="text" size="40" id="tb" />
+</script>
+     <input type="text" size="40" id="tb"/>
 </body>
 </html>
