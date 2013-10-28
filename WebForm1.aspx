@@ -45,7 +45,7 @@ list-style: none;
         <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
         <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
         <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
-        <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
+        <li class="symbol"><span class="off">7</span><span class="on">долар</span></li>
         <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
         <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
         <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
