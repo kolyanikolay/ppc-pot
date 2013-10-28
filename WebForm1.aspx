@@ -134,7 +134,7 @@ list-style: none;
               $tb.html($tb.html() + sst);
           });
       });
-      $("#dialog").dialog({ width: 800 }, { height: 500 });
+      $("#dialog").dialog({ width: 700 }, { height: 350 });
       $("#dialog").dialog({ resizable: false })
        current_date = new Date();
        document.write("Дата: " + current_date + ".");
