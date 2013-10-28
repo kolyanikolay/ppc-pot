@@ -20,6 +20,7 @@ list-style: none;
     height: 30px;
     text-align: center;
     border: 2px solid black;
+    -webkit-border-radius: 5px;
     }
         .on {
         display: none;
