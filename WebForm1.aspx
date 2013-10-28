@@ -50,7 +50,7 @@ list-style: none;
         <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
         <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
         <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
-        <li class="BackSpace" style="width: 110px; height: 30px"">delete</li>
+        <li class="delete" style="width: 110px; height: 30px"">BackSpace</li>
  </div>
  <div style="width: 650px">
         <li class="tab" style="width: 45px; height: 30px">tab</li>
