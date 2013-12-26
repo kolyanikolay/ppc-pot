@@ -1,19 +1,31 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="StudentsDB.Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head runat="server">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <style type="text/css">
+        .bts
+        {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            float: left;
+            margin: 0 5px 5px 0;
+            text-align: center;
+            border: 2px solid black;
+    -       webkit-border-radius: 5px;
+        }
+        
 #bts {
 margin: 0;
 padding: 0;
 list-style: none;
 }
-    #bts li {
+    #bts li{
     float: left;
     margin: 0 5px 5px 0;
     width: 30px;
@@ -34,7 +46,37 @@ list-style: none;
         }
     </style>
 </head>
-<body style="height: 207px">
+<body>
+    <form id="form1" runat="server">
+   <asp:Button runat="server" CssClass="bts" ID="Button2" Text="Сохранить" 
+                OnClick="Add_Click" Height="30px" Width="115px"/>
+   <asp:Button runat="server" CssClass="bts" ID="Button1" Text="История" 
+                OnClick="hisclick" Height="30px" Width="115px"/>
+   <asp:Button runat="server" CssClass="bts" ID="Button3" Text="Удалить всё" 
+                OnClick="ydl" Height="30px" Width="115px" CommandArgument='1' UseSubmitBehavior="False"/>
+   <textarea runat="server" id="tb" cols="20" name="S1" rows="2"></textarea>
+    <div>
+        <asp:Repeater runat="server" ID="Repeater1">
+            <HeaderTemplate>
+                <table>
+                    <tr>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                    <td>
+                        <%# Eval("FName") %>
+                    </td>
+                </tr>
+            </ItemTemplate>
+            <FooterTemplate>
+                </table>
+            </FooterTemplate>
+        </asp:Repeater>
+
   <div id="dialog" title="Виртуальная клавиатура v2.1">
   <ul id="bts">
   <div style="width: 650px">
@@ -45,7 +87,7 @@ list-style: none;
         <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
         <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
         <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
-        <li class="symbol"><span class="off">7</span><span class="on">долар</span></li>
+        <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
         <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
         <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
         <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
@@ -82,7 +124,7 @@ list-style: none;
         <li class="symbol"><span class="off">l</span><span class="on">L</span></li>
         <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
         <li class="symbol"><span class="off">'</span><span class="on">Ковычки</span></li>
-        <li class="otp" style="width: 115px; height: 30px">Сохронить</li>
+        <li class="pust" style="width: 115px; height: 30px"></li>
  </div>
  <div style="width: 650px">
         <li class="left-shift"  style="width: 73px; height: 30px"/>shift</li>
@@ -100,8 +142,8 @@ list-style: none;
  </div>
  <div style="width: 560px">
         <li class="space"style="width: 261px; height: 30px; margin-left: 99px;"> </li>
+        </ul>
  </div>
- </ul>
   </div>
   <script>
       $(function () {
@@ -137,9 +179,8 @@ list-style: none;
       });
       $("#dialog").dialog({ width: 700 }, { height: 350 });
       $("#dialog").dialog({ resizable: false })
-       current_date = new Date();
-       document.write("Дата: " + current_date + ".");
 </script>
-   <textarea size="40" id="tb"></textarea>
- </body>
+
+   &nbsp;</form>
+</body>
 </html>
